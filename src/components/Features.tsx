@@ -8,31 +8,29 @@ import { Layers, Zap, Globe, Shield, Smartphone, Layout } from "lucide-react";
 
 export function Features() {
   return (
-    <section className="py-32 relative overflow-hidden bg-slate-950">
-      {/* Background Elements */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-blue-900/20 blur-[100px] rounded-full opacity-30 pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-indigo-900/10 blur-[120px] rounded-full opacity-30 pointer-events-none" />
+    <section className="py-32 relative overflow-hidden bg-background">
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full opacity-30 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full opacity-30 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/30 border border-blue-500/20 text-sm font-medium text-blue-400">
-            <Zap className="size-3 fill-blue-400" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
+            <Zap className="size-3 fill-primary" />
             Our Capabilities
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
             Empowering Businesses with <br />
-            <span className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
               Cutting-Edge Digital Solutions
             </span>
           </h2>
-          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             We provide comprehensive digital services to help your business grow
             and succeed in the modern era.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-          {/* Feature 1: Software Development */}
           <Card className="bg-slate-900/50 border-white/5 overflow-hidden group hover:border-blue-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.1)]">
             <CardContent className="p-0">
               <div className="aspect-video bg-slate-950/50 relative p-8 flex items-center justify-center overflow-hidden border-b border-white/5">

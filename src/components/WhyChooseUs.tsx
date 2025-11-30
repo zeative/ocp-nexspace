@@ -9,30 +9,28 @@ import { CheckCircle2, BarChart3, Lock, Zap } from "lucide-react";
 
 export function WhyChooseUs() {
   return (
-    <section className="py-32 bg-slate-950 relative overflow-hidden">
-      {/* Background Gradients */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-900/10 blur-[100px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-900/10 blur-[100px] rounded-full pointer-events-none" />
+    <section className="py-32 bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/30 border border-blue-500/20 text-sm font-medium text-blue-400">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
             <CheckCircle2 className="size-3" />
             Why Choose Us
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Built for <span className="text-blue-500">Performance</span>, <br />
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+            Built for <span className="text-primary">Performance</span>, <br />
             Designed for <span className="text-purple-500">Scale</span>
           </h2>
-          <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
             We deliver technology that adapts to your needs, ensuring you stay
             ahead in a rapidly evolving digital landscape.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Card 1: Deep Customization */}
-          <Card className="bg-slate-900/50 border-white/5 overflow-hidden group hover:border-blue-500/30 transition-all duration-500 hover:shadow-[0_0_40px_rgba(59,130,246,0.1)]">
+          <Card className="bg-card border-border overflow-hidden group hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_40px_rgba(17,17,241,0.1)]">
             <CardHeader>
               <div className="size-12 rounded-lg bg-blue-500/10 flex items-center justify-center mb-4 border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
                 <BarChart3 className="size-6 text-blue-400" />
