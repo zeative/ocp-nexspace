@@ -1,18 +1,16 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import { METADATA } from "@/consts";
+import type { Metadata } from "next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { LanguageProvider } from "@/lib/language-context";
+import { SmoothScroll } from "@/components/smooth-scroll";
 
-const geistSans = Figtree({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const font = Figtree({ subsets: ["latin"] });
 
-const geistMono = Figtree({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata = METADATA;
+export const metadata: Metadata = {
+  title: "Modern AI Landing Page",
+  description: "A pixel-perfect replication of a modern AI landing page.",
+};
 
 export default function RootLayout({
   children,
@@ -20,11 +18,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={font.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LanguageProvider>
+            <SmoothScroll />
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
