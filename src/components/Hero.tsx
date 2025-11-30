@@ -1,22 +1,15 @@
-"use client";
-
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import ColorBends from "./ColorBends";
 import FloatingLines from "./FloatingLines";
 import DarkVeil from "./DarkVeil";
-import { useTheme } from "next-themes";
 
 export function Hero() {
-  const { theme } = useTheme();
-
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-background">
-      {theme === "dark" && (
-        <div className="absolute top-0 left-0 w-full h-full">
-          <DarkVeil />
-        </div>
-      )}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <DarkVeil />
+      </div>
 
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
 

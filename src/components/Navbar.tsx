@@ -2,14 +2,12 @@
 
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/lib/language-context";
-import { Languages, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
+import { Languages } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
-  const { theme, setTheme } = useTheme();
   const { language, setLanguage } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
@@ -52,19 +50,6 @@ export function Navbar() {
           </Link>
 
           <div className="flex items-center gap-2 pl-4 border-l border-border">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="size-8 rounded-full hover:bg-muted"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {theme === "dark" ? (
-                <Sun className="size-4 text-yellow-400" />
-              ) : (
-                <Moon className="size-4 text-slate-700" />
-              )}
-            </Button>
-
             <Button
               variant="ghost"
               size="sm"

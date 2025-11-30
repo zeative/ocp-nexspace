@@ -1,7 +1,5 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/lib/language-context";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { METADATA } from "@/consts";
@@ -16,19 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body className={font.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <LanguageProvider>
-            <SmoothScroll />
-            {children}
-          </LanguageProvider>
-        </ThemeProvider>
+        <LanguageProvider>
+          <SmoothScroll />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
