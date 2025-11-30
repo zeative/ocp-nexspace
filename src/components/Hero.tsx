@@ -1,14 +1,24 @@
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
-import ColorBends from "./ColorBends";
-import FloatingLines from "./FloatingLines";
-import DarkVeil from "./DarkVeil";
+import { GridScan } from "./GridScan";
+import LightRays from "./LightRays";
 
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-background">
       <div className="absolute top-0 left-0 w-full h-full">
-        <DarkVeil />
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#00ffff"
+          raysSpeed={1.5}
+          lightSpread={0.8}
+          rayLength={1.2}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0.1}
+          distortion={0.05}
+          className="custom-rays"
+        />
       </div>
 
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
@@ -27,7 +37,7 @@ export function Hero() {
             <span className="block text-foreground drop-shadow-sm">
               Build Smarter.
             </span>
-            <span className="block bg-gradient-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(17,17,241,0.3)]">
+            <span className="block bg-linear-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(17,17,241,0.3)]">
               Scale Faster.
             </span>
           </h1>
@@ -106,7 +116,7 @@ export function Hero() {
                           >
                             <div
                               style={{ height: `${h}%` }}
-                              className="absolute bottom-0 w-full bg-gradient-to-t from-primary to-cyan-400 opacity-80 group-hover/bar:opacity-100 transition-opacity"
+                              className="absolute bottom-0 w-full bg-linear-to-t from-primary to-cyan-400 opacity-80 group-hover/bar:opacity-100 transition-opacity"
                             />
                           </div>
                         )
@@ -129,7 +139,7 @@ export function Hero() {
                         <div className="h-full w-3/4 bg-primary" />
                       </div>
                     </div>
-                    <div className="flex-1 bg-gradient-to-br from-primary/20 to-purple-900/20 border border-border rounded-xl p-5 flex flex-col justify-center items-center text-center">
+                    <div className="flex-1 bg-linear-to-br from-primary/20 to-purple-900/20 border border-border rounded-xl p-5 flex flex-col justify-center items-center text-center">
                       <div className="size-12 rounded-full bg-primary/20 flex items-center justify-center mb-3">
                         <Zap className="size-6 text-primary" />
                       </div>
@@ -140,7 +150,7 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
 

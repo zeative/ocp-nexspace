@@ -31,7 +31,7 @@ export function Navbar() {
             className="size-6"
           />
           <span className="text-lg font-bold tracking-tight text-foreground hidden sm:block">
-            React Bits
+            OCP Nexspace
           </span>
         </div>
 
