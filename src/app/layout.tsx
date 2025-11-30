@@ -1,9 +1,9 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/lib/language-context";
-import { SmoothScroll } from "@/components/smooth-scroll";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 const font = Figtree({ subsets: ["latin"] });
 

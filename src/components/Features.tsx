@@ -3,7 +3,7 @@ import {
   CardContent,
   CardDescription,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 import { Layers, Zap, Globe, Shield, Smartphone, Layout } from "lucide-react";
 
 export function Features() {

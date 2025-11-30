@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import ColorBends from "./ColorBends";
 import FloatingLines from "./FloatingLines";
