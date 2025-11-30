@@ -1,56 +1,40 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Bot } from "lucide-react";
+import { Bot, Atom } from "lucide-react";
 
 export function Navbar() {
   return (
-    <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="size-8 rounded-lg bg-primary flex items-center justify-center">
-            <Bot className="size-5 text-white" />
-          </div>
-          <span className="text-xl font-bold tracking-tight">MODULR</span>
+    <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+      <div className="bg-black/80 backdrop-blur-xl border border-white/10 rounded-full py-3 px-6 flex items-center justify-between w-full max-w-2xl shadow-2xl shadow-black/50">
+        {/* Logo */}
+        <div className="flex items-center gap-2 mr-8">
+          <Atom className="size-6 text-white animate-spin-slow" />
+          <span className="text-lg font-bold tracking-tight text-white">
+            React Bits
+          </span>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Navigation Links */}
+        <nav className="flex items-center gap-6 ml-auto">
           <Link
             href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
           >
-            Features
+            Home
           </Link>
           <Link
             href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
           >
-            Solutions
+            Docs
           </Link>
           <Link
             href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+            className="text-sm font-medium text-slate-300 hover:text-white transition-colors"
           >
-            Pricing
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-          >
-            Resources
+            Components
           </Link>
         </nav>
-
-        <div className="flex items-center gap-4">
-          <Link
-            href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors hidden sm:block"
-          >
-            Sign In
-          </Link>
-          <Button variant="glow" size="sm" className="rounded-full px-6">
-            Get Started
-          </Button>
-        </div>
       </div>
     </header>
   );
