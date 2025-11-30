@@ -4,13 +4,11 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/lib/language-context";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { METADATA } from "@/consts";
 
 const font = Figtree({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Modern AI Landing Page",
-  description: "A pixel-perfect replication of a modern AI landing page.",
-};
+export const metadata = METADATA;
 
 export default function RootLayout({
   children,

@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/lib/language-context";
-import { Atom, Languages, Moon, Sun } from "lucide-react";
+import { Languages, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export function Navbar() {
@@ -17,21 +18,25 @@ export function Navbar() {
   }, []);
 
   if (!mounted) {
-    return null; // Avoid hydration mismatch
+    return null;
   }
 
   return (
     <header className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       <div className="bg-background/80 backdrop-blur-xl border border-border rounded-full py-2 px-4 md:px-6 flex items-center justify-between w-full max-w-3xl shadow-2xl shadow-black/10 dark:shadow-black/50 transition-all duration-300">
-        {/* Logo */}
         <div className="flex items-center gap-2 mr-4 md:mr-8">
-          <Atom className="size-6 text-primary animate-spin-slow" />
+          <Image
+            src="/meta/favicon.svg"
+            alt="Company Logo"
+            width={24}
+            height={24}
+            className="size-6"
+          />
           <span className="text-lg font-bold tracking-tight text-foreground hidden sm:block">
             React Bits
           </span>
         </div>
 
-        {/* Navigation Links */}
         <nav className="flex items-center gap-4 md:gap-6 ml-auto">
           <Link
             href="#"
@@ -46,7 +51,6 @@ export function Navbar() {
             Docs
           </Link>
 
-          {/* Toggles */}
           <div className="flex items-center gap-2 pl-4 border-l border-border">
             <Button
               variant="ghost"
