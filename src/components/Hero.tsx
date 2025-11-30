@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Sparkles, Zap } from "lucide-react";
-import { GridScan } from "./GridScan";
+import { ArrowRight, CheckCircle2, Sparkles, Zap } from "lucide-react";
+import FloatingSymbols from "./FloatingSymbols";
 import LightRays from "./LightRays";
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-background">
+    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-background text-foreground">
       <div className="absolute top-0 left-0 w-full h-full">
+        <FloatingSymbols />
+
         <LightRays
           raysOrigin="top-center"
           raysColor="#00ffff"
@@ -21,50 +23,56 @@ export function Hero() {
         />
       </div>
 
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(74,222,128,0.15),transparent_70%)] pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary animate-fade-in-up backdrop-blur-md shadow-[0_0_15px_rgba(17,17,241,0.1)] hover:border-primary/40 transition-colors cursor-default">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-            </span>
-            <span className="tracking-wide">v2.0 Now Live</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary animate-fade-in-up backdrop-blur-md shadow-[0_0_15px_rgba(74,222,128,0.1)] hover:border-primary/40 transition-colors cursor-default">
+            <span className="tracking-wide">Our Capital, Your Success</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] animate-fade-in-up delay-100">
             <span className="block text-foreground drop-shadow-sm">
-              Build Smarter.
+              No Time Limit Prop Firm
             </span>
-            <span className="block bg-linear-to-r from-primary via-cyan-400 to-primary bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(17,17,241,0.3)]">
-              Scale Faster.
+            <span className="block text-primary drop-shadow-[0_0_30px_rgba(74,222,128,0.3)]">
+              Conquer the market
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up delay-200 leading-relaxed">
-            Empower your business with AI-driven insights. The platform designed
-            for{" "}
-            <span className="text-primary font-medium">unstoppable growth</span>{" "}
-            and seamless scalability.
-          </p>
+          <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-muted-foreground animate-fade-in-up delay-200">
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="size-4 text-primary" />
+              <span>The Lab™ Native platform</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="size-4 text-primary" />
+              <span>Fast progress</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="size-4 text-primary" />
+              <span>No time Limit Prop firm</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle2 className="size-4 text-primary" />
+              <span>Unique programs</span>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 animate-fade-in-up delay-300 pt-4">
             <Button
               size="lg"
-              variant="glow"
-              className="rounded-full h-14 px-10 text-base font-semibold"
+              className="rounded-full h-14 px-10 text-base font-semibold bg-white text-black hover:bg-gray-200"
             >
-              Get Started Free
+              Start a challenge
               <ArrowRight className="ml-2 size-5" />
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full h-14 px-10 text-base font-medium"
+              className="rounded-full h-14 px-10 text-base font-medium border-white/20 text-white hover:bg-white/10"
             >
-              <Zap className="mr-2 size-5 text-yellow-400 fill-yellow-400" />
-              View Demo
+              Free trial
             </Button>
           </div>
         </div>
