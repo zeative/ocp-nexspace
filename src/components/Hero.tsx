@@ -1,12 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
+import ColorBends from "./ColorBends";
+import FloatingLines from "./FloatingLines";
+import DarkVeil from "./DarkVeil";
 
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center">
       {/* Background Gradients - Enhanced for 'Spotlight' effect */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full opacity-40 pointer-events-none mix-blend-screen" />
-      <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none opacity-30" />
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-blue-600/20 blur-[120px] rounded-full opacity-40 pointer-events-none mix-blend-screen" />
+      <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-indigo-600/10 blur-[100px] rounded-full pointer-events-none opacity-30" /> */}
+
+      <div className="absolute top-0 left-0 w-full h-full">
+        <DarkVeil />
+      </div>
 
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay"></div>
