@@ -37,16 +37,28 @@ export function Navbar() {
 
         <nav className="flex items-center gap-4 md:gap-6 ml-auto">
           <Link
-            href="#"
+            href="/"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
             Home
           </Link>
           <Link
+            href="/projects"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Projects
+          </Link>
+          <Link
             href="#"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
-            Docs
+            Services
+          </Link>
+          <Link
+            href="#"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            About
           </Link>
 
           <div className="flex items-center gap-2 pl-4 border-l border-border">
