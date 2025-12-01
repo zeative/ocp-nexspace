@@ -49,6 +49,12 @@ export function Navbar() {
             Projects
           </Link>
           <Link
+            href="/blog"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
+          <Link
             href="#"
             className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
           >
