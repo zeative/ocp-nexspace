@@ -28,7 +28,7 @@ export function Navbar() {
             alt="Company Logo"
             width={24}
             height={24}
-            className="size-6"
+            className="size-8"
           />
           <span className="text-lg font-bold tracking-tight text-foreground hidden sm:block">
             OCP Nexspace
