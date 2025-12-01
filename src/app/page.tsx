@@ -5,6 +5,8 @@ import { Features } from "@/components/Features";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Testimonials } from "@/components/Testimonials";
 import { Footer } from "@/components/Footer";
+import { AboutUs } from "@/components/AboutUs";
+import { Team } from "@/components/Team";
 
 export default function Home() {
   return (
@@ -12,8 +14,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <LogoTicker />
+      <AboutUs />
       <Features />
       <WhyChooseUs />
+      <Team />
       <Testimonials />
       <Footer />
     </main>
