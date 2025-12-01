@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight, CheckCircle2, Sparkles, Zap } from "lucide-react";
 import FloatingSymbols from "./FloatingSymbols";
 import LightRays from "./LightRays";
+import RotatingText from "./RotatingText";
+
+const SHOWN_TEXT = [
+  "Build Smarter,",
+  "Scale Faster,",
+  "Smarter Systems,",
+  "Stronger Growth,",
+];
 
 export function Hero() {
   return (
@@ -33,7 +41,18 @@ export function Hero() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] animate-fade-in-up delay-100">
             <span className="block text-foreground drop-shadow-sm">
-              Smarter Systems,
+              <RotatingText
+                texts={SHOWN_TEXT}
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.015}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={4000}
+                mainClassName="justify-center"
+              />
             </span>
             <span className="block text-primary drop-shadow-[0_0_30px_rgba(74,222,128,0.3)]">
               AI-Driven for the Future.
