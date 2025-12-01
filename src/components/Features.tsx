@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Card,
   CardContent,
@@ -5,10 +7,16 @@ import {
   CardTitle,
 } from "@/components/ui/Card";
 import { Layers, Zap, Globe, Shield, Smartphone, Layout } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 export function Features() {
+  const { t } = useLanguage();
+
   return (
-    <section className="py-32 relative overflow-hidden bg-background">
+    <section
+      className="py-32 relative overflow-hidden bg-background"
+      id="services"
+    >
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[100px] rounded-full opacity-30 pointer-events-none" />
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full opacity-30 pointer-events-none" />
 
@@ -16,18 +24,16 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
             <Zap className="size-3 fill-primary" />
-            What We Do Best
+            {t.features.badge}
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-            Enterprise-Grade Solutions <br />
+            {t.features.title} <br />
             <span className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
-              Built for your Success
+              {t.features.titleHighlight}
             </span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            From AI-powered analytics to scalable cloud infrastructure, we
-            deliver cutting-edge technology solutions that transform your
-            business operations.
+            {t.features.subtitle}
           </p>
         </div>
 
@@ -38,7 +44,6 @@ export function Features() {
                 <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none mix-blend-overlay" />
                 <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Detailed Dashboard Mockup */}
                 <div className="w-full max-w-md bg-slate-900 rounded-xl border border-white/10 p-4 shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500 relative z-10">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex gap-2">
@@ -74,7 +79,6 @@ export function Features() {
                   </div>
                 </div>
 
-                {/* Floating Elements */}
                 <div className="absolute top-10 right-10 p-2 bg-slate-800/80 backdrop-blur-md rounded-lg border border-white/10 shadow-xl transform rotate-6 group-hover:rotate-12 transition-transform duration-700">
                   <Layout className="size-5 text-blue-400" />
                 </div>
@@ -88,18 +92,15 @@ export function Features() {
                   <Layers className="size-6 text-blue-400" />
                 </div>
                 <CardTitle className="text-2xl mb-3 group-hover:text-blue-400 transition-colors">
-                  Custom Software Development
+                  {t.features.card1.title}
                 </CardTitle>
                 <p className="text-slate-400 leading-relaxed">
-                  Build powerful, scalable applications tailored to your unique
-                  business needs. Our expert team delivers enterprise-grade
-                  solutions using cutting-edge technologies.
+                  {t.features.card1.description}
                 </p>
               </div>
             </CardContent>
           </Card>
 
-          {/* Feature 2: Integrations */}
           <Card className="bg-slate-900/50 border-white/5 overflow-hidden group hover:border-blue-500/30 transition-all duration-500 hover:shadow-[0_0_50px_rgba(59,130,246,0.1)]">
             <CardContent className="p-0 flex flex-col h-full">
               <div className="aspect-video bg-slate-950/50 relative p-8 flex flex-col justify-center border-b border-white/5 overflow-hidden">
@@ -140,12 +141,10 @@ export function Features() {
                   <Globe className="size-6 text-purple-400" />
                 </div>
                 <CardTitle className="text-2xl mb-3 group-hover:text-purple-400 transition-colors">
-                  AI & Big Data Solutions
+                  {t.features.card2.title}
                 </CardTitle>
                 <p className="text-slate-400 leading-relaxed">
-                  Harness the power of artificial intelligence and big data
-                  analytics to gain actionable insights, automate processes, and
-                  make data-driven decisions.
+                  {t.features.card2.description}
                 </p>
               </div>
             </CardContent>

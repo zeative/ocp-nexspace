@@ -1,5 +1,8 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/Card";
 import { Quote } from "lucide-react";
+import { useLanguage } from "@/lib/language-context";
 
 const TESTIMONIALS = [
   {
@@ -47,12 +50,14 @@ const TESTIMONIALS = [
 ];
 
 export function Testimonials() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24 relative">
       <div className="container mx-auto px-4">
         <div className="mb-20">
           <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-wider">
-            Our Clients
+            {t.testimonials.badge}
           </p>
           <div className="mask-linear-fade overflow-hidden">
             <div className="flex flex-nowrap gap-16 md:gap-24 animate-marquee min-w-full shrink-0 items-center opacity-60 grayscale">
@@ -85,15 +90,16 @@ export function Testimonials() {
 
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm text-primary">
-            Testimonials
+            {t.testimonials.badge}
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-            Trusted by Industry <br />
-            <span className="text-primary">Leaders Worldwide</span>
+            {t.testimonials.title} <br />
+            <span className="text-primary">
+              {t.testimonials.titleHighlight}
+            </span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            See what our clients say about working with us and the results we've
-            delivered together.
+            {t.testimonials.subtitle}
           </p>
         </div>
 
@@ -110,7 +116,7 @@ export function Testimonials() {
                 </p>
                 <div className="flex items-center gap-3 pt-4 border-t border-white/5">
                   <div
-                    className={`size-10 rounded-full bg-gradient-to-br ${testimonial.gradient}`}
+                    className={`size-10 rounded-full bg-linear-to-br ${testimonial.gradient}`}
                   />
                   <div>
                     <p className="font-semibold text-white text-sm">

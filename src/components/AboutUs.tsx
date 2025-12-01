@@ -1,23 +1,27 @@
+"use client";
+
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
 
 export function AboutUs() {
+  const { t } = useLanguage();
+
   return (
-    <section className="py-24 bg-background relative overflow-hidden">
+    <section
+      className="py-24 bg-background relative overflow-hidden"
+      id="about"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-primary font-semibold tracking-wide uppercase">
-            Who We Are
+            {t.about.badge}
           </h2>
           <h3 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-            Transforming Ideas into{" "}
-            <span className="text-primary">Powerful Solutions</span>
+            {t.about.title}{" "}
+            <span className="text-primary">{t.about.titleHighlight}</span>
           </h3>
-          <p className="text-muted-foreground text-lg">
-            OCP Nexspace specializes in Big Data, AI, and Enterprise Software
-            Development. We turn complex challenges into innovative solutions
-            that drive measurable results.
-          </p>
+          <p className="text-muted-foreground text-lg">{t.about.subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
@@ -26,22 +30,20 @@ export function AboutUs() {
 
             <div className="relative z-10 space-y-8">
               <div className="space-y-6">
-                <h4 className="text-2xl font-bold text-white">Our Mission</h4>
+                <h4 className="text-2xl font-bold text-white">
+                  {t.about.mission.title}
+                </h4>
                 <p className="text-muted-foreground leading-relaxed">
-                  We empower businesses through intelligent software solutions.
-                  With expertise in Big Data, AI, and cloud technologies, we
-                  deliver scalable systems that drive growth, optimize
-                  operations, and create competitive advantages in the digital
-                  economy.
+                  {t.about.mission.description}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  "AI & Big Data Experts",
-                  "Agile Methodology",
-                  "24/7 Support",
-                  "Proven Track Record",
+                  t.about.values.val1,
+                  t.about.values.val2,
+                  t.about.values.val3,
+                  t.about.values.val4,
                 ].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="bg-primary/20 p-1.5 rounded-full">
@@ -54,7 +56,7 @@ export function AboutUs() {
 
               <div className="pt-4">
                 <button className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary/80 transition-colors group/btn">
-                  Learn more about our journey
+                  {t.about.cta}
                   <ArrowRight className="size-4 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -66,7 +68,7 @@ export function AboutUs() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-50" />
               <div className="relative h-full w-full rounded-2xl overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f01290129c71c?q=80&w=2070&auto=format&fit=crop"
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
                   alt="Team collaboration"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100"
@@ -76,8 +78,7 @@ export function AboutUs() {
                 <div className="absolute bottom-8 left-8 right-8">
                   <div className="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-2xl">
                     <p className="text-white font-medium text-lg">
-                      "Technology should enable business success, not complicate
-                      it. We make it simple."
+                      "{t.about.quote}"
                     </p>
                   </div>
                 </div>

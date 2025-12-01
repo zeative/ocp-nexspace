@@ -7,8 +7,10 @@ import { ArrowRight, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 export default function ProjectsPage() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -36,10 +38,11 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Case <span className="text-primary">Studies</span>
+              {t.projects.title}{" "}
+              <span className="text-primary">{t.projects.titleHighlight}</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl">
-              Projects from our various amazing clients.
+              {t.projects.subtitle}
             </p>
           </div>
 
@@ -66,7 +69,7 @@ export default function ProjectsPage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search for keyword..."
+                placeholder={t.projects.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-white/5 border border-white/10 rounded-full pl-12 pr-4 py-3 text-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
@@ -107,7 +110,7 @@ export default function ProjectsPage() {
           {filteredProjects.length === 0 && (
             <div className="text-center py-16">
               <p className="text-muted-foreground text-lg">
-                No projects found matching your criteria.
+                {t.projects.noResults}
               </p>
             </div>
           )}

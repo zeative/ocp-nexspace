@@ -7,8 +7,10 @@ import { Search, Calendar, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "@/lib/language-context";
 
 export default function BlogPage() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -36,14 +38,14 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Our <span className="text-primary">Blog</span>
+              {t.blog.title}{" "}
+              <span className="text-primary">{t.blog.titleHighlight}</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl">
-              Insights, tutorials, and updates from our team of experts.
+              {t.blog.subtitle}
             </p>
           </div>
 
-          {/* Filters */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {categories.map((category) => (
               <button
@@ -60,13 +62,12 @@ export default function BlogPage() {
             ))}
           </div>
 
-          {/* Search */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search articles..."
+                placeholder={t.blog.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-white/5 border border-white/10 rounded-full pl-12 pr-4 py-3 text-white placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
@@ -74,7 +75,6 @@ export default function BlogPage() {
             </div>
           </div>
 
-          {/* Blog Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post) => (
               <Link
@@ -89,7 +89,7 @@ export default function BlogPage() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-black/50 to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#0f172a] via-black/50 to-transparent opacity-60" />
 
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary/90 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full font-medium">
@@ -119,7 +119,9 @@ export default function BlogPage() {
                     </div>
                     <div className="flex items-center gap-1">
                       <Clock className="size-3" />
-                      <span>{post.readTime} min read</span>
+                      <span>
+                        {post.readTime} {t.blog.readTime}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -130,7 +132,7 @@ export default function BlogPage() {
           {filteredPosts.length === 0 && (
             <div className="text-center py-16">
               <p className="text-muted-foreground text-lg">
-                No blog posts found matching your criteria.
+                {t.blog.noResults}
               </p>
             </div>
           )}

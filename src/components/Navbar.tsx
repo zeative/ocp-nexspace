@@ -7,16 +7,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const NAV_ITEMS = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "Blog", href: "/blog" },
-  { label: "Services", href: "/#services" },
-  { label: "About", href: "/#about" },
+const NAV_ITEMS = (t: any) => [
+  { label: t.nav.home, href: "/" },
+  { label: t.nav.projects, href: "/projects" },
+  { label: t.nav.blog, href: "/blog" },
+  { label: t.nav.services, href: "/#services" },
+  { label: t.nav.about, href: "/#about" },
 ];
 
 export function Navbar() {
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export function Navbar() {
         </div>
 
         <nav className="flex items-center gap-4 md:gap-6 ml-auto">
-          {NAV_ITEMS.map((item) => (
+          {NAV_ITEMS(t).map((item) => (
             <Link
               key={item.label}
               href={item.href}

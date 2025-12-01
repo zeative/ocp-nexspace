@@ -1,17 +1,22 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, CheckCircle2, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import FloatingSymbols from "./FloatingSymbols";
 import LightRays from "./LightRays";
 import RotatingText from "./RotatingText";
-
-const SHOWN_TEXT = [
-  "Build Smarter,",
-  "Scale Faster,",
-  "Smarter Systems,",
-  "Stronger Growth,",
-];
+import { useLanguage } from "@/lib/language-context";
 
 export function Hero() {
+  const { t } = useLanguage();
+
+  const SHOWN_TEXT = [
+    t.hero.rotating.text1,
+    t.hero.rotating.text2,
+    t.hero.rotating.text3,
+    t.hero.rotating.text4,
+  ];
+
   return (
     <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden min-h-screen flex flex-col justify-center bg-background text-foreground">
       <div className="absolute top-0 left-0 w-full h-full">
@@ -36,9 +41,7 @@ export function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary animate-fade-in-up backdrop-blur-md shadow-[0_0_15px_rgba(74,222,128,0.1)] hover:border-primary/40 transition-colors cursor-default">
-            <span className="tracking-wide">
-              Enterprise Solutions. Powered by Innovation.
-            </span>
+            <span className="tracking-wide">{t.hero.badge}</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] animate-fade-in-up delay-100">
@@ -57,26 +60,26 @@ export function Hero() {
               />
             </span>
             <span className="block text-primary drop-shadow-[0_0_30px_rgba(74,222,128,0.3)]">
-              AI-Driven for the Future.
+              {t.hero.subtitle}
             </span>
           </h1>
 
           <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-muted-foreground animate-fade-in-up delay-200">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>AI & Big Data Expertise</span>
+              <span>{t.hero.features.ai}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>Enterprise-Grade Security</span>
+              <span>{t.hero.features.security}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>Scalable Cloud Architecture</span>
+              <span>{t.hero.features.cloud}</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>Agile Development</span>
+              <span>{t.hero.features.agile}</span>
             </div>
           </div>
 
@@ -85,7 +88,7 @@ export function Hero() {
               size="lg"
               className="rounded-full h-14 px-10 text-base font-semibold bg-white text-black hover:bg-gray-200"
             >
-              Start Your Project
+              {t.hero.cta.primary}
               <ArrowRight className="ml-2 size-5" />
             </Button>
             <Button
@@ -93,7 +96,7 @@ export function Hero() {
               variant="outline"
               className="rounded-full h-14 px-10 text-base font-medium border-white/20 text-white hover:bg-white/10"
             >
-              View Case Studies
+              {t.hero.cta.secondary}
             </Button>
           </div>
         </div>
@@ -156,7 +159,7 @@ export function Hero() {
                   <div className="col-span-1 flex flex-col gap-6">
                     <div className="flex-1 bg-card border border-border rounded-xl p-5 relative overflow-hidden">
                       <div className="absolute top-0 right-0 p-3 opacity-20">
-                        <Sparkles className="size-12 text-primary" />
+                        <CheckCircle2 className="size-12 text-primary" />
                       </div>
                       <div className="h-4 w-24 bg-muted rounded mb-4" />
                       <div className="h-10 w-32 bg-muted-foreground/20 rounded mb-2" />
@@ -170,7 +173,7 @@ export function Hero() {
                     </div>
                     <div className="flex-1 bg-linear-to-br from-primary/20 to-purple-900/20 border border-border rounded-xl p-5 flex flex-col justify-center items-center text-center">
                       <div className="size-12 rounded-full bg-primary/20 flex items-center justify-center mb-3">
-                        <Zap className="size-6 text-primary" />
+                        <CheckCircle2 className="size-6 text-primary" />
                       </div>
                       <div className="h-4 w-24 bg-muted rounded mb-2" />
                       <div className="h-3 w-40 bg-muted/50 rounded" />

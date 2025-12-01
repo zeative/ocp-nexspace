@@ -1,70 +1,107 @@
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+"use client";
+
+import { Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="bg-background py-12">
       <div className="container mx-auto px-4">
         <div className="bg-[#0f172a] rounded-3xl p-8 md:p-16 relative overflow-hidden border border-white/5">
-          {/* Background Glow/Effect */}
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 w-full h-full bg-linear-to-b from-white/5 to-transparent pointer-events-none" />
           <div className="absolute -bottom-1/2 -left-1/4 w-1/2 h-full bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
           <div className="absolute -top-1/2 -right-1/4 w-1/2 h-full bg-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
-            {/* Column 1: Brand & Desc */}
             <div className="space-y-6">
               <div className="flex items-center gap-2">
-                <div className="flex items-center gap-2">
-                  <Image
-                    src="/meta/logo.png"
-                    alt="OCP Nexspace"
-                    width={32}
-                    height={32}
-                    className="size-8"
-                  />
-                  <span className="text-xl font-bold tracking-tight text-white">
-                    OCP Nexspace
-                  </span>
-                </div>
+                <Image
+                  src="/meta/logo.png"
+                  alt="OCP Nexspace"
+                  width={32}
+                  height={32}
+                  className="size-8"
+                />
+                <span className="text-xl font-bold tracking-tight text-white">
+                  OCP Nexspace
+                </span>
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-                PT OCP NEXSPACE INDONESIA
-                <br />
-                <br />
-                Leverage Big Data and Artificial Intelligence to drive
-                efficiency, scalability, and innovation in your organization.
+                {t.footer.tagline}
               </p>
             </div>
 
-            {/* Column 2: Sitemap */}
             <div>
               <h3 className="font-bold text-white mb-6 uppercase text-sm tracking-wider">
-                Sitemap
+                {t.footer.quickLinks}
               </h3>
               <ul className="space-y-4 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-primary transition-colors">
-                    Services
+                  <a
+                    href="/#about"
+                    className="hover:text-primary transition-colors"
+                  >
+                    {t.footer.sitemap.aboutUs}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/projects"
+                    className="hover:text-primary transition-colors"
+                  >
+                    {t.nav.projects}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog"
+                    className="hover:text-primary transition-colors"
+                  >
+                    {t.nav.blog}
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-primary transition-colors">
-                    Projects
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary transition-colors">
-                    Blog
+                    {t.footer.sitemap.contactUs}
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Column 3: Connect */}
             <div>
               <h3 className="font-bold text-white mb-6 uppercase text-sm tracking-wider">
-                Let's Connect
+                {t.footer.services}
+              </h3>
+              <ul className="space-y-4 text-sm text-muted-foreground">
+                <li>
+                  <a href="#" className="hover:text-primary transition-colors">
+                    {t.footer.servicesItems.customDev}
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-primary transition-colors">
+                    {t.footer.servicesItems.aiSolutions}
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-primary transition-colors">
+                    {t.footer.servicesItems.bigData}
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-primary transition-colors">
+                    {t.footer.servicesItems.cloudServices}
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="font-bold text-white mb-6 uppercase text-sm tracking-wider">
+                {t.footer.followUs}
               </h3>
               <div className="flex gap-4">
                 <a
@@ -81,33 +118,11 @@ export function Footer() {
                 </a>
               </div>
             </div>
-
-            {/* Column 4: Address */}
-            <div>
-              <h3 className="font-bold text-white mb-6 uppercase text-sm tracking-wider">
-                Address
-              </h3>
-              <ul className="space-y-4 text-sm text-muted-foreground">
-                <li className="flex gap-3 items-start">
-                  <span className="shrink-0">📍</span>
-                  <span>
-                    APL Tower Central Park Lt. 19. Jl. Letjen S. Parman Kav. 28,
-                    Petamburan, Jakarta Barat
-                  </span>
-                </li>
-                <li className="flex gap-3 items-center">
-                  <span className="shrink-0">📞</span>
-                  <span>021 50955752</span>
-                </li>
-              </ul>
-            </div>
           </div>
 
-          {/* Footer Bottom */}
-          <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>&copy; 2025 OCP Nexspace. All Rights Reserved</p>
-            <p className="uppercase tracking-wider text-xs">
-              PT OCP NEXSPACE TEKNOLOGI
+          <div className="mt-16 pt-8 border-t border-white/10 text-center relative z-10">
+            <p className="text-sm text-muted-foreground">
+              {t.footer.copyright}
             </p>
           </div>
         </div>
