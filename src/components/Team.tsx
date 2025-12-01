@@ -3,44 +3,41 @@ import Image from "next/image";
 
 const TEAM_MEMBERS = [
   {
-    name: "Alex Morgan",
-    role: "CEO & Founder",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop",
-    bio: "Visionary leader with 10+ years in tech innovation.",
+    name: "zaadevofc",
+    role: "Fullstack Developer",
+    image: "/people/kejaa.jpeg",
+    bio: "Fullstack Developer with 3+ years in tech innovation.",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+  },
+  {
+    name: "zaadevofc",
+    role: "Fullstack Developer",
+    image: "/people/kejaa.jpeg",
+    bio: "Fullstack Developer with 3+ years in tech innovation.",
     socials: {
       linkedin: "#",
       twitter: "#",
     },
   },
   {
-    name: "Sarah Chen",
-    role: "CTO",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop",
-    bio: "Expert in AI architecture and scalable systems.",
+    name: "zaadevofc",
+    role: "Fullstack Developer",
+    image: "/people/kejaa.jpeg",
+    bio: "Fullstack Developer with 3+ years in tech innovation.",
     socials: {
       linkedin: "#",
-      github: "#",
-    },
-  },
-  {
-    name: "Michael Ross",
-    role: "Lead Developer",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
-    bio: "Full-stack wizard passionate about clean code.",
-    socials: {
       twitter: "#",
-      github: "#",
     },
   },
   {
-    name: "Emily Davis",
-    role: "Head of Design",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop",
-    bio: "Creating intuitive and stunning user experiences.",
+    name: "zaadevofc",
+    role: "Fullstack Developer",
+    image: "/people/kejaa.jpeg",
+    bio: "Fullstack Developer with 3+ years in tech innovation.",
     socials: {
       linkedin: "#",
       twitter: "#",
@@ -82,7 +79,7 @@ export function Team() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
 
                 {/* Socials Overlay */}
-                <div className="absolute bottom-4 left-0 w-full flex justify-center gap-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                <div className="absolute bottom-0 left-0 w-full flex justify-center gap-4 translate-y-full group-hover:-translate-y-4 transition-transform duration-300">
                   {member.socials.linkedin && (
                     <a
                       href={member.socials.linkedin}
