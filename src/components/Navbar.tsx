@@ -7,6 +7,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+const NAV_ITEMS = [
+  { label: "Home", href: "/" },
+  { label: "Projects", href: "/projects" },
+  { label: "Blog", href: "/blog" },
+  { label: "Services", href: "/#services" },
+  { label: "About", href: "/#about" },
+];
+
 export function Navbar() {
   const { language, setLanguage } = useLanguage();
   const [mounted, setMounted] = useState(false);
@@ -36,36 +44,15 @@ export function Navbar() {
         </div>
 
         <nav className="flex items-center gap-4 md:gap-6 ml-auto">
-          <Link
-            href="/"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/projects"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Projects
-          </Link>
-          <Link
-            href="/blog"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Blog
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            Services
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-          >
-            About
-          </Link>
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {item.label}
+            </Link>
+          ))}
 
           <div className="flex items-center gap-2 pl-4 border-l border-border">
             <Button
