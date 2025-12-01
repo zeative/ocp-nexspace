@@ -16,6 +16,7 @@ export default function FloatingSymbols() {
     let height = (canvas.height = window.innerHeight);
 
     const symbols = [
+      "anjayy",
       "∫",
       "∑",
       "∂",
@@ -30,10 +31,12 @@ export default function FloatingSymbols() {
       "12",
       "4x",
       "y²",
+      "kejaa",
       "log",
       "sin",
       "cos",
       "tan",
+      "zaadevofc",
       "e",
       "f(x)",
     ];

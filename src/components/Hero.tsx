@@ -33,10 +33,10 @@ export function Hero() {
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] animate-fade-in-up delay-100">
             <span className="block text-foreground drop-shadow-sm">
-              No Time Limit Prop Firm
+              Smarter Systems,
             </span>
             <span className="block text-primary drop-shadow-[0_0_30px_rgba(74,222,128,0.3)]">
-              Conquer the market
+              AI-Driven for the Future.
             </span>
           </h1>
 

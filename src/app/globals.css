@@ -45,52 +45,73 @@
 
 :root {
   --radius: 0.625rem;
-  --background: #050a05;
+
+  --background: #020617;
   --foreground: #e2e8f0;
-  --card: #0a120a;
+
+  --card: #020617;
   --card-foreground: #e2e8f0;
-  --popover: #0a120a;
+
+  --popover: #020617;
   --popover-foreground: #e2e8f0;
-  --primary: #4ade80;
-  --primary-foreground: #022c22;
-  --secondary: #14532d;
-  --secondary-foreground: #f0fdf4;
-  --muted: #14532d;
-  --muted-foreground: #86efac;
-  --accent: #14532d;
-  --accent-foreground: #f0fdf4;
+
+  /* Biru utama = warna logo biru terang */
+  --primary: #2563eb;
+  --primary-foreground: #e2e8f0;
+
+  /* Biru tua = warna atap/logo bagian gelap */
+  --secondary: #0f172a;
+  --secondary-foreground: #e2e8f0;
+
+  --muted: #020617;
+  --muted-foreground: #93c5fd;
+
+  --accent: #1d4ed8;
+  --accent-foreground: #e2e8f0;
+
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #14532d;
-  --input: #14532d;
-  --ring: #4ade80;
-  --chart-1: #4ade80;
-  --chart-2: #22c55e;
-  --chart-3: #16a34a;
-  --chart-4: #15803d;
-  --chart-5: #166534;
+
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #2563eb;
+
+  /* Chart pakai gradasi biru */
+  --chart-1: #2563eb;
+  --chart-2: #1d4ed8;
+  --chart-3: #1e40af;
+  --chart-4: #0f3aa2;
+  --chart-5: #0b316f;
 }
 
 .dark {
-  --background: #050a05;
+  --background: #020617;
   --foreground: #e2e8f0;
-  --card: #0a120a;
+
+  --card: #020617;
   --card-foreground: #e2e8f0;
-  --popover: #0a120a;
+
+  --popover: #020617;
   --popover-foreground: #e2e8f0;
-  --primary: #4ade80;
-  --primary-foreground: #022c22;
-  --secondary: #14532d;
-  --secondary-foreground: #f0fdf4;
-  --muted: #14532d;
-  --muted-foreground: #86efac;
-  --accent: #14532d;
-  --accent-foreground: #f0fdf4;
+
+  --primary: #2563eb;
+  --primary-foreground: #e2e8f0;
+
+  --secondary: #0f172a;
+  --secondary-foreground: #e2e8f0;
+
+  --muted: #020617;
+  --muted-foreground: #93c5fd;
+
+  --accent: #1d4ed8;
+  --accent-foreground: #e2e8f0;
+
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #14532d;
-  --input: #14532d;
-  --ring: #4ade80;
+
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #2563eb;
 }
 
 @layer base {
