@@ -36,7 +36,9 @@ export function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary animate-fade-in-up backdrop-blur-md shadow-[0_0_15px_rgba(74,222,128,0.1)] hover:border-primary/40 transition-colors cursor-default">
-            <span className="tracking-wide">Our Capital, Your Success</span>
+            <span className="tracking-wide">
+              Enterprise Solutions. Powered by Innovation.
+            </span>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] animate-fade-in-up delay-100">
@@ -62,19 +64,19 @@ export function Hero() {
           <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base text-muted-foreground animate-fade-in-up delay-200">
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>The Lab™ Native platform</span>
+              <span>AI & Big Data Expertise</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>Fast progress</span>
+              <span>Enterprise-Grade Security</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>No time Limit Prop firm</span>
+              <span>Scalable Cloud Architecture</span>
             </div>
             <div className="flex items-center gap-1.5">
               <CheckCircle2 className="size-4 text-primary" />
-              <span>Unique programs</span>
+              <span>Agile Development</span>
             </div>
           </div>
 
@@ -83,7 +85,7 @@ export function Hero() {
               size="lg"
               className="rounded-full h-14 px-10 text-base font-semibold bg-white text-black hover:bg-gray-200"
             >
-              Start a challenge
+              Start Your Project
               <ArrowRight className="ml-2 size-5" />
             </Button>
             <Button
@@ -91,7 +93,7 @@ export function Hero() {
               variant="outline"
               className="rounded-full h-14 px-10 text-base font-medium border-white/20 text-white hover:bg-white/10"
             >
-              Free trial
+              View Case Studies
             </Button>
           </div>
         </div>

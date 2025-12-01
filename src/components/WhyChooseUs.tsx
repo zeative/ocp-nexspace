@@ -20,12 +20,12 @@ export function WhyChooseUs() {
             Why Choose Us
           </div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-            Built for <span className="text-primary">Performance</span>, <br />
-            Designed for <span className="text-purple-500">Scale</span>
+            Built for <span className="text-primary">Enterprise</span>, <br />
+            Scaled for <span className="text-purple-500">Growth</span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto">
-            We deliver technology that adapts to your needs, ensuring you stay
-            ahead in a rapidly evolving digital landscape.
+            We combine technical excellence with business acumen to deliver
+            solutions that scale with your ambitions.
           </p>
         </div>
 
@@ -36,11 +36,11 @@ export function WhyChooseUs() {
                 <BarChart3 className="size-6 text-blue-400" />
               </div>
               <CardTitle className="text-2xl group-hover:text-blue-400 transition-colors">
-                Deep Customization
+                Scalable Architecture
               </CardTitle>
               <CardDescription className="text-base text-slate-400">
-                Tailor every aspect of your dashboard to fit your specific
-                workflow.
+                Build for today. Scale for tomorrow. Our solutions grow with
+                your business.
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0 mt-4">
@@ -77,11 +77,11 @@ export function WhyChooseUs() {
                 <Zap className="size-6 text-purple-400" />
               </div>
               <CardTitle className="text-2xl group-hover:text-purple-400 transition-colors">
-                Superior User Experience
+                AI-Powered Intelligence
               </CardTitle>
               <CardDescription className="text-base text-slate-400">
-                Intuitive interfaces designed for maximum productivity and ease
-                of use.
+                Leverage machine learning and advanced analytics to make
+                smarter, faster decisions.
               </CardDescription>
             </CardHeader>
             <CardContent className="p-0 mt-4">
@@ -133,11 +133,11 @@ export function WhyChooseUs() {
                   <CheckCircle2 className="size-6 text-cyan-400" />
                 </div>
                 <CardTitle className="text-2xl mb-2 group-hover:text-cyan-400 transition-colors">
-                  Proven Expertise
+                  Proven Track Record
                 </CardTitle>
                 <CardDescription className="text-base text-slate-400">
-                  Years of experience delivering top-tier solutions for industry
-                  leaders.
+                  Trusted by industry leaders. Delivering results for Fortune
+                  500 companies and innovative startups alike.
                 </CardDescription>
               </div>
             </CardContent>
@@ -183,11 +183,11 @@ export function WhyChooseUs() {
                   <Lock className="size-6 text-green-400" />
                 </div>
                 <CardTitle className="text-2xl mb-2 group-hover:text-green-400 transition-colors">
-                  Secure and Reliable
+                  Enterprise Security
                 </CardTitle>
                 <CardDescription className="text-base text-slate-400">
-                  Enterprise-grade security protocols to keep your data safe and
-                  accessible 24/7.
+                  Bank-level encryption and security protocols. Your data is
+                  protected by industry-leading safeguards.
                 </CardDescription>
               </div>
             </CardContent>

@@ -16,17 +16,18 @@ export function Features() {
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-primary">
             <Zap className="size-3 fill-primary" />
-            Our Capabilities
+            What We Do Best
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground">
-            Empowering Businesses with <br />
+            Enterprise-Grade Solutions <br />
             <span className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
-              Cutting-Edge Digital Solutions
+              Built for your Success
             </span>
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            We provide comprehensive digital services to help your business grow
-            and succeed in the modern era.
+            From AI-powered analytics to scalable cloud infrastructure, we
+            deliver cutting-edge technology solutions that transform your
+            business operations.
           </p>
         </div>
 
@@ -87,12 +88,12 @@ export function Features() {
                   <Layers className="size-6 text-blue-400" />
                 </div>
                 <CardTitle className="text-2xl mb-3 group-hover:text-blue-400 transition-colors">
-                  Software Development
+                  Custom Software Development
                 </CardTitle>
                 <p className="text-slate-400 leading-relaxed">
-                  Tailored software solutions that drive efficiency and
-                  innovation. We build scalable applications designed to meet
-                  your unique business needs.
+                  Build powerful, scalable applications tailored to your unique
+                  business needs. Our expert team delivers enterprise-grade
+                  solutions using cutting-edge technologies.
                 </p>
               </div>
             </CardContent>
@@ -139,11 +140,12 @@ export function Features() {
                   <Globe className="size-6 text-purple-400" />
                 </div>
                 <CardTitle className="text-2xl mb-3 group-hover:text-purple-400 transition-colors">
-                  Seamless Integrations
+                  AI & Big Data Solutions
                 </CardTitle>
                 <p className="text-slate-400 leading-relaxed">
-                  Connect your favorite tools and platforms. We ensure smooth
-                  data flow and interoperability across your entire tech stack.
+                  Harness the power of artificial intelligence and big data
+                  analytics to gain actionable insights, automate processes, and
+                  make data-driven decisions.
                 </p>
               </div>
             </CardContent>
