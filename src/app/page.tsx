@@ -1,10 +1,10 @@
-import { Navbar } from "@/components/Navbar";
+import { Navbar } from "@/components/shared/Navbar";
 import { Hero } from "@/components/Hero";
-import { LogoTicker } from "@/components/LogoTicker";
+import { LogoTicker } from "@/components/rbits/LogoTicker";
 import { Features } from "@/components/Features";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { Testimonials } from "@/components/Testimonials";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/shared/Footer";
 import { AboutUs } from "@/components/AboutUs";
 import { Team } from "@/components/Team";
 

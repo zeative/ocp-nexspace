@@ -1,7 +1,7 @@
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/language-context";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import { SmoothScroll } from "@/components/shared/SmoothScroll";
 import { METADATA } from "@/consts";
 
 const font = Figtree({ subsets: ["latin"] });

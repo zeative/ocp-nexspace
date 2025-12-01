@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
-import FloatingSymbols from "./FloatingSymbols";
-import LightRays from "./LightRays";
-import RotatingText from "./RotatingText";
+import FloatingSymbols from "./rbits/FloatingSymbols";
+import LightRays from "./rbits/LightRays";
+import RotatingText from "./rbits/RotatingText";
 import { useLanguage } from "@/lib/language-context";
 
 export function Hero() {

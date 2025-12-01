@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer";
 import { BLOG_POSTS } from "@/data/blogs";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
 import Image from "next/image";

@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "@/components/shared/Navbar";
+import { Footer } from "@/components/shared/Footer";
 import { PROJECTS } from "@/data/projects";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import Image from "next/image";

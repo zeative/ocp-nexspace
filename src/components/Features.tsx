@@ -1,13 +1,8 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/Card";
-import { Layers, Zap, Globe, Shield, Smartphone, Layout } from "lucide-react";
+import { Card, CardContent, CardTitle } from "@/components/ui/Card";
 import { useLanguage } from "@/lib/language-context";
+import { Globe, Layers, Layout, Smartphone, Zap } from "lucide-react";
 
 export function Features() {
   const { t } = useLanguage();
