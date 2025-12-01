@@ -10,24 +10,32 @@ export function Testimonials() {
           <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-wider">
             Our Clients
           </p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-60 grayscale">
-            {/* Simple text placeholders for client logos as seen in image */}
-            {[
-              "DENSO",
-              "intel",
-              "TOYOTA",
-              "PUMA",
-              "Ferrari",
-              "Red Bull",
-              "Mercedes",
-            ].map((client) => (
-              <span
-                key={client}
-                className="text-xl md:text-2xl font-bold font-mono"
-              >
-                {client}
-              </span>
-            ))}
+          <div className="mask-linear-fade overflow-hidden">
+            <div className="flex flex-nowrap gap-16 md:gap-24 animate-marquee min-w-full shrink-0 items-center opacity-60 grayscale">
+              {[
+                "DENSO",
+                "intel",
+                "TOYOTA",
+                "PUMA",
+                "Ferrari",
+                "Red Bull",
+                "Mercedes",
+                "DENSO",
+                "intel",
+                "TOYOTA",
+                "PUMA",
+                "Ferrari",
+                "Red Bull",
+                "Mercedes",
+              ].map((client, index) => (
+                <span
+                  key={`${client}-${index}`}
+                  className="text-xl md:text-2xl font-bold font-mono shrink-0"
+                >
+                  {client}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
